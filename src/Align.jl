@@ -73,7 +73,7 @@ uses the contig names from the reference FASTA, not the new assembly.
 """
 function align_assembly(
     ref_fasta_path, asm_fasta_path, out_bam_path, out_fasta_path;
-    preset="asm5", min_ac=1, min_af=1, max_dp=1, threads=3)
+    preset="asm5", min_ac=4, min_af=0.75, max_dp=1, threads=3)
 
     minimap2consensus(
         ref_fasta_path, asm_fasta_path, out_bam_path, out_fasta_path,
